@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat With Ease</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    openSans: ['"Open Sans"', 'sans-serif']
+                }
+            },
+        }
+    </script>
+</head>
+
+<body class="font-openSans overflow-scroll overflow-hidden">
+    <div class="container h-screen flex items-top">
+<!-- 
+        <div class="m-[45px] w-[205px]">
+            <div class="mb-[65px] size-[60px] relative">
+                <img class="object-cover" src="./assets/images/Facebook Messenger Logo.svg" alt="">
+                <a class="inset-0 absolute" href="www.facebook.com"></a>
+            </div>
+            <div class="flex flex-col gap-[33px] mb-[357px]">
+                <button class="flex space-x-[12px] items-center">
+                    <span class="size-[37px]"><img class="object-cover" src="./assets/images/messages3.svg"
+                            alt=""></span>
+                    <span class="font-bold text-[32px] leading-[44px] text-[#476CFF]">Chat</span>
+                </button>
+                <button class="flex space-x-[12px] items-center">
+                    <span class="size-[37px]"><img class="object-cover" src="./assets/images/people.svg" alt=""></span>
+                    <span class="font-bold text-[32px] leading-[44px] text-[#212121]">People</span>
+                </button>
+                <button class="flex space-x-[12px] items-center">
+                    <span class="size-[37px]"><img class="object-cover" src="./assets/images/shopadd.svg" alt=""></span>
+                    <span class="font-bold text-[32px] leading-[44px] text-[#212121]">Shop</span>
+                </button>
+                <button class="flex space-x-[12px] items-center">
+                    <span class="size-[37px]"><img class="object-cover" src="./assets/images/documentforward.svg"
+                            alt=""></span>
+                    <span class="font-bold text-[32px] leading-[44px] text-[#212121]">Request</span>
+                </button>
+                <button class="flex space-x-[12px] items-center">
+                    <span class="size-[37px]"><img class="object-cover" src="./assets/images/archivebox.svg"
+                            alt=""></span>
+                    <span class="font-bold text-[32px] leading-[44px] text-[#212121]">Archive</span>
+                </button>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="size-[70px]"><img class="w-full h-full rounded-full object-cover overflow-hidden"
+                        src="./assets/images/pp.jpg" alt=""></div>
+                <div class="size-[66px] rounded-full bg-[#F8F8F8]"><img class="w-full p-[13px]"
+                        src="./assets/images/logoutcurve.svg" alt=""></div>
+            </div>
+        </div> -->
+
+
+
+        <div class="bg-[#F8F8F8] h-full flex flex-col w-[350px] py-[40px] px-[40px]">
+           <div class="">
+                <div class="mb-[32px]">
+                    <div class="text-[32px] font-bold" >Chat</div>
+                </div>
+                <div class=" bg-[#E2E2E2] h-[40px] px-[20px] py-[14px] flex rounded-full items-center">
+                    <i class="fa fa-search mr-[4px]"></i>
+                    <input id="searchUser" class="bg-transparent outline-none" type="text">
+                </div>
+           </div>
+
+
+           <div class="flex-1 overflow-y-auto pt-[40px] space-y-[15px]" id="userContainer">
+                
+           </div>
+        </div>
+
+
+
+        <div class="flex-1 py-[40px] px-[30px] flex flex-col" id="userConvoSide">
+           <div class="flex items-center justify-between h-[70px]">
+                <div class="flex items-center justify-between space-x-[15px]">
+                    <figure class="size-[70px] rounded-full border-2 border-gray-400 overflow-hidden">
+                        <img src="./assets/images/pp.jpg" class="size-full object-cover" alt="">
+                    </figure>
+                    <div class="text-[32px] font-bold">Lilly Jr.</div>
+                </div>
+           </div>
+
+
+           <div class="flex-1 overflow-y-auto my-[15px] space-y-[20px]">
+                <div class="flex">
+                    <div class="flex w-[400px] gap-[15px]">
+                        <figure  class="size-[50px] shrink-0 rounded-full border-2 border-gray-400 overflow-hidden">
+                            <img src="./assets/images/pp.jpg" class="size-full object-cover" alt="">
+                        </figure>
+                        <div class="bg-[#476CFF] p-4 rounded-2xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ullam totam. Hic ab voluptates praesentium aspernatur excepturi molestiae, iusto vel delectus cum consequatur, animi expedita labore dolore atque eveniet optio!</div>
+                    </div>
+                </div>
+
+                <div class="flex justify-end">
+                    <div class="flex w-[400px] flex-row-reverse gap-[15px]">
+                        <figure  class="size-[50px] shrink-0 rounded-full border-2 border-gray-400 overflow-hidden">
+                            <img src="./assets/images/pp.jpg" class="size-full object-cover" alt="">
+                        </figure>
+                        <div class="bg-[#476CFF] p-4 rounded-2xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ullam totam. Hic ab voluptates praesentium aspernatur excepturi molestiae, iusto vel delectus cum consequatur, animi expedita labore dolore atque eveniet optio!</div>
+                    </div>
+                </div>
+
+                
+           </div>
+
+
+           <div class="h-[60px] bg-[#E2E2E2] flex items-center rounded-full overflow-hidden">
+                <input type="text" placeholder="Message" class="h-full bg-transparent outline-none w-full px-[20px]">
+           </div>
+        </div>
+        
+
+    </div>
+
+
+    <script src="./assets/js/messages.js"></script>
+    <script src="./assets/js/users.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
